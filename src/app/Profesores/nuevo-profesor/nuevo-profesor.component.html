@@ -1,0 +1,41 @@
+<form  autocomplete="off" (submit)="onSubmit(form)">
+
+  <input type="hidden" name = "Id">
+  <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text bg-white">
+              <i class="far fa-user"></i>
+          </div>
+        </div>
+        <input name ="nombre"  class ="form-control" placeholder="Nombre" Required>
+      </div>    
+  </div>
+  
+  <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text bg-white">
+              <i class="far fa-user"></i>
+          </div>
+        </div>
+        <input name = "apellido"  class = "form-control" placeholder="Apellido" Required>
+      </div>    
+  </div>
+
+  <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text bg-white">
+              <i class="far fa-user"></i>
+          </div>
+        </div>
+        <input name = "Edad" type = "number" class = "form-control"  placeholder="Edad">
+      </div>    
+  </div>
+
+  <div class="form-group">
+    <button class = "btn btn-success btn-lg btn-block" type ="submit"><i class="fas fa-database"></i> Crear o Modificar</button>
+</div>
+</form>
+ 

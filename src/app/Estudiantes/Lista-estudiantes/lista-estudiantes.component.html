@@ -1,0 +1,25 @@
+<table class="table table-hover">
+
+    <tr>
+        <td><strong>Nombre</strong></td>
+        <td><strong>Apellido</strong></td>
+        <td><strong>Edad</strong></td>
+        <td><strong>Correo</strong></td>
+        <td><strong>Telefono</strong></td>
+        <td><strong>Seccion</strong></td>
+    </tr>
+
+
+<tr *ngFor="let pd of service.list">
+    
+    <td (click)="SeleccionaRegistro(pd)">{{pd.nombre}}</td>
+    <td (click)="SeleccionaRegistro(pd)">{{pd.apellido}}</td>
+    <td (click)="SeleccionaRegistro(pd)">{{pd.edad}}</td>
+    <td (click)="SeleccionaRegistro(pd)">{{pd.correo}}</td>
+    <td (click)="SeleccionaRegistro(pd)">{{pd.telefono}}</td>
+    <td (click)="SeleccionaRegistro(pd)">{{pd.idsecciones}}</td>
+
+
+</tr>
+
+</table>
