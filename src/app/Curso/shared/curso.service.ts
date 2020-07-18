@@ -23,4 +23,14 @@ crefreshList(){
   this.http.get(this.rootURL+'/curso').toPromise().then(res => this.list = res as Curso[]);
 }
 
+UpdateCurso()
+{
+   return this.http.put(this.rootURL+'/curso/'+ this.formData.Id,this.formData);
+}
+
+Deletecurso(id)
+{
+   return this.http.delete(this.rootURL+'/curso/'+ id);
+}
+
 }

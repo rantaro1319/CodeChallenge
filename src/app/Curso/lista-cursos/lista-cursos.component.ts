@@ -20,5 +20,17 @@ export class ListaCursosComponent implements OnInit {
 
     this.cservice.formData = Object.assign({},cd);
   }
-    
+
+  onDelete(Id){
+    if (confirm('Estas seguro que quieres borrar este registro?')) {
+      this.cservice.Deletecurso(Id)
+        .subscribe(res => {
+          this.cservice.crefreshList();
+        },
+        err => { console.log(err); })
+  
+   }
+  
   }
+    
+}

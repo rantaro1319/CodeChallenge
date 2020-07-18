@@ -1,20 +1,16 @@
 <table class="table table-hover">
 
   <tr>
-
       <td><strong>Cod.Curso</strong></td>
       <td><strong>Nombre</strong></td>
-      <td><strong>Hora</strong></td>
-      <td><strong>Aula</strong></td>
-      <td><strong>Profesor</strong></td>
-      
-      
 
   </tr>
+  
 <tr *ngFor="let cd of cservice.list">
   
   <td (click)="SeleccionaRegistro(cd)">{{cd.Id}}</td>
   <td (click)="SeleccionaRegistro(cd)">{{cd.nombre}}</td>
+  <td><i class="far fa-trash-alt fa-lg text" (click) = "onDelete(cd.Id)"></i></td>
 
 
 

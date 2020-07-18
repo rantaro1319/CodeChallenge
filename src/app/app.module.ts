@@ -62,13 +62,13 @@ const rutas: Routes = [
     CunionComponent,
     NuevoCursoComponent,
     ListaCursosComponent,
-    
 
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
+      
     RouterModule.forRoot(rutas)
     
   ],

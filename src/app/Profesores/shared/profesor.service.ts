@@ -22,5 +22,15 @@ export class ProfesorService {
   
     this.http.get(this.rootURL+'/profesores').toPromise().then(res => this.list = res as Profesor[]);
   }
+
+  Updateprofesor()
+  {
+     return this.http.put(this.rootURL+'/profesores/'+ this.formData.Id,this.formData);
+  }
+  
+  Deleteprofesor(id)
+  {
+     return this.http.delete(this.rootURL+'/profesores/'+ id);
+  } 
   
   }

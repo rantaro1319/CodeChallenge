@@ -1,6 +1,6 @@
 <form  autocomplete="off" (submit)="onSubmit(form)">
 
-  <input type="hidden" name = "Id">
+  <input type="hidden" name = "Id" [value] = "pservice.formData.Id" >
   <div class="form-group">
       <div class="input-group">
         <div class="input-group-prepend">
@@ -8,7 +8,7 @@
               <i class="far fa-user"></i>
           </div>
         </div>
-        <input name ="nombre"  class ="form-control" placeholder="Nombre" Required>
+        <input name ="nombre" #nombre ="ngModel" [(ngModel)] = "pservice.formData.nombre" class ="form-control" placeholder="Nombre" Required>
       </div>    
   </div>
   
@@ -19,7 +19,7 @@
               <i class="far fa-user"></i>
           </div>
         </div>
-        <input name = "apellido"  class = "form-control" placeholder="Apellido" Required>
+        <input name = "apellido" #apellido ="ngModel" [(ngModel)] = "pservice.formData.apellido"  class = "form-control" placeholder="Apellido" Required>
       </div>    
   </div>
 
@@ -30,7 +30,7 @@
               <i class="far fa-user"></i>
           </div>
         </div>
-        <input name = "Edad" type = "number" class = "form-control"  placeholder="Edad">
+        <input name = "Edad"  #edad ="ngModel" [(ngModel)] = "pservice.formData.Edad" type = "number" class = "form-control"  placeholder="Edad">
       </div>    
   </div>
 

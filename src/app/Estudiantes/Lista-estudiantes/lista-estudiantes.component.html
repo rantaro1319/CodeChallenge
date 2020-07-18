@@ -6,7 +6,8 @@
         <td><strong>Edad</strong></td>
         <td><strong>Correo</strong></td>
         <td><strong>Telefono</strong></td>
-        <td><strong>Seccion</strong></td>
+        
+        
     </tr>
 
 
@@ -17,7 +18,7 @@
     <td (click)="SeleccionaRegistro(pd)">{{pd.edad}}</td>
     <td (click)="SeleccionaRegistro(pd)">{{pd.correo}}</td>
     <td (click)="SeleccionaRegistro(pd)">{{pd.telefono}}</td>
-    <td (click)="SeleccionaRegistro(pd)">{{pd.idsecciones}}</td>
+    <td><i class="far fa-trash-alt fa-lg text" (click) = "onDelete(pd.Id)"></i></td>
 
 
 </tr>

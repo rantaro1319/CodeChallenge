@@ -21,5 +21,16 @@ export class ListaEstudianteComponent implements OnInit {
     this.service.formData = Object.assign({},pd);
   }
     
-  }
+ onDelete(Id){
+  if (confirm('Estas seguro que quieres borrar este registro?')) {
+    this.service.Deletestudiante(Id)
+      .subscribe(res => {
+        this.service.refreshList();
+      },
+      err => { console.log(err); })
+ }
+
+}
+
+}
  

@@ -21,4 +21,16 @@ export class ListaProfesoresComponent implements OnInit {
     this.pservice.formData = Object.assign({},pd);
   }
 
+  onDelete(Id){
+    if (confirm('Estas seguro que quieres borrar este registro?')) {
+      this.pservice.Deleteprofesor(Id)
+        .subscribe(res => {
+          this.pservice.prefreshList();
+        },
+        err => { console.log(err); })
+  
+   }
+  
+  }
+
 }
